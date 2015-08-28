@@ -20,6 +20,17 @@ second+third => 5 /
 */
 
 var total = function (array) {
-  //write total here
+  if (array.length === 1) {
+    return array[0];
+  } else {
+    var added = [];
+
+  	for (var i = 0; i < array.length - 1; i++) {
+  	  added.push(array[i] + array[i + 1]);
+  	}
+
+  	return total(added);
+  }
+
 };
 
